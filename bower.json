@@ -1,0 +1,25 @@
+{
+  "name": "cameracar",
+  "version": "0.0.0",
+  "authors": [
+    "jsakamoto <junichi.jp@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  },
+  "exportsOverride": {
+
+    "jquery": {
+      "js": "dist/*.js",
+      "map": "dist/*.map"
+    }
+  }
+}
