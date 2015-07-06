@@ -1,0 +1,75 @@
+﻿body, div, p, pre, img, a, span {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+body {
+    background-color: #444;
+}
+
+a.btn {
+    overflow: hidden;
+    background-color: #888;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    color: transparent;
+    opacity: 0.5;
+}
+
+#photo-preview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url(/images/_blank.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#moving-controller {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 192px;
+    height: 192px;
+}
+
+#btn-move-forward {
+    left: 64px;
+}
+
+#btn-move-backward {
+    left: 64px;
+    bottom: 0;
+}
+
+#btn-turn-left {
+    top: 64px;
+}
+
+#btn-turn-right {
+    top: 64px;
+    right: 0;
+}
+
+#lift-controller {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 64px;
+    height: 192px;
+}
+
+#btn-lift-down {
+    bottom: 0;
+}
+
+#btn-take-photo {
+    top: 0;
+    right: 0;
+}

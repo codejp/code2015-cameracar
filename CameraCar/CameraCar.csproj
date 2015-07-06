@@ -95,9 +95,11 @@
     <Content Include="App_Data\umiiguana.jpg" />
     <Content Include="App_Data\_blank.png" />
     <Content Include="Global.asax" />
+    <Content Include="images\_blank.png" />
     <Content Include="index.html" />
     <Content Include="lib\jquery\jquery.js" />
     <Content Include="lib\jquery\jquery.min.js" />
+    <Content Include="site.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

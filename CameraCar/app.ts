@@ -30,7 +30,7 @@ module CameraCarApp {
     wireUpMotorActon('#btn-lift-down', 'StartLiftDown');
 
     var photoPreviewElem = <HTMLImageElement>document.getElementById('photo-preview');
-    //setInterval(() => {
-    //    photoPreviewElem.src = "/Photo/Preview?" + (new Date()).getTime();
-    //}, 1000);
+    setInterval(() => {
+        photoPreviewElem.style.backgroundImage = `url(/Photo/Preview?${(new Date()).getTime() })`;
+    }, 1000);
 }

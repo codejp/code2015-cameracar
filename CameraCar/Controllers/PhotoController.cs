@@ -46,7 +46,7 @@ namespace CameraCar.Controllers
                     "~/App_Data/umiiguana.jpg");
 #else
                 // take photo using fswebcam - low resolution/low quality/high compress rate
-                Process.Start("fswebcam", "-q -r 320 --jpeg 30 " + imagePath)
+                Process.Start("fswebcam", "-q -r 320 --jpeg 30 --no-banner " + imagePath)
                     .WaitForExit();
 #endif
                 var imageBuff = System.IO.File.ReadAllBytes(imagePath);
@@ -117,7 +117,7 @@ namespace CameraCar.Controllers
 #if DEBUG
             System.IO.File.Copy(Server.MapPath("~/App_Data/penguin.jpg"), imagePath);
 #else
-            Process.Start("fswebcam", "-q -r 1024 --jpeg 95 " + imagePath)
+            Process.Start("fswebcam", "-q -r 1024 --jpeg 95 --no-banner " + imagePath)
                .WaitForExit();
 #endif
             lock (_syncTakePhoto)
