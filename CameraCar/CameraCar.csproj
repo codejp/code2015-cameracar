@@ -121,6 +121,7 @@
       <DependentUpon>app.ts</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\Publish.pubxml" />
+    <None Include="Properties\PublishProfiles\RaspberryPi.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
