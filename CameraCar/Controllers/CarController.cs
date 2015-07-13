@@ -23,14 +23,13 @@ namespace CameraCar.Controllers
             public const int LiftU = 4;
             public const int LiftD = 5;
         }
-
         public CarController()
         {
             lock (_sync)
             {
                 if (_GPIO == null)
                 {
-                    _GPIO = new[] { 18, 19, 20, 21, 22, 23 }
+                    _GPIO = new[] { 23, 24, 22, 27, 20, 21 }
                         .Select(TinyGPIO.Export)
                         .ToArray();
                     _GPIO.ToList()
