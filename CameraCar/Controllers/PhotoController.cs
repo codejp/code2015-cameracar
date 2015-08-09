@@ -26,6 +26,8 @@ namespace CameraCar.Controllers
 
         private static object _syncThread = new object();
 
+        private static object _syncFswebcam = new object();
+
 #if DEBUG
         private static int _Counter = 0;
 #endif
@@ -46,6 +48,7 @@ namespace CameraCar.Controllers
                     "~/App_Data/umiiguana.jpg");
 #else
                 // take photo using fswebcam - low resolution/low quality/high compress rate
+                lock (_syncFswebcam)
                 Process.Start("fswebcam", "-q -r 320 --jpeg 30 --no-banner " + imagePath)
                     .WaitForExit();
 #endif
@@ -69,7 +72,7 @@ namespace CameraCar.Controllers
                     }
                 }
 
-                Thread.Sleep((int)Math.Max((periodUTC.AddSeconds(1)- DateTime.UtcNow).TotalMilliseconds, 0));
+                Thread.Sleep((int)Math.Max((periodUTC.AddSeconds(1) - DateTime.UtcNow).TotalMilliseconds, 0));
             }
         }
 
@@ -117,6 +120,7 @@ namespace CameraCar.Controllers
 #if DEBUG
             System.IO.File.Copy(Server.MapPath("~/App_Data/penguin.jpg"), imagePath);
 #else
+            lock (_syncFswebcam)
             Process.Start("fswebcam", "-q -r 1024 --jpeg 95 --no-banner " + imagePath)
                .WaitForExit();
 #endif
