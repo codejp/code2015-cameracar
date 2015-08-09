@@ -122,6 +122,7 @@
     </Content>
     <None Include="Properties\PublishProfiles\Publish.pubxml" />
     <None Include="Properties\PublishProfiles\RaspberryPi.pubxml" />
+    <Content Include="Views\Home\gallery.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
